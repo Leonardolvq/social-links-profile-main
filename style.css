@@ -14,38 +14,46 @@ main{
     flex-direction: column;
     align-items: center;
     width: auto;
+    min-width: 280px;
     height: auto;
     background-color: #1F1F1F;
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 0.4rem;
-    font-family: 'Inter-Bold', 'Roboto', 'sans-serif';
+    font-family: 'Inter', 'Roboto', 'sans-serif';
+}
+
+.photo_container{
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 img{
     height: auto;
     width: 80px;
     object-fit: cover;
-    border-radius: 50%;
+    transform: scale(2.2);
 }
 
 .name{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #EEE;
     font-weight: 600;
     margin-top: 30px;
 }
 
 .location{
-    color: #BBDD47;
+    color: #FF5621;
+    font-size: 0.8rem;
     font-weight: 600;
-    font-size: 1rem;
     margin-top: 10px;
 }
 
 .profession{
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
     margin-top: 30px;
+    color: #C8C8C8
 }
 
 .buttons{
@@ -60,13 +68,37 @@ img{
     margin-top: 30px;
 }
 
-button{
+.buttons a{
+    display: inline-block;
+    text-align: center;
     width: 100%;
     padding: 13px;
     border: none;
     margin-top: 15px;
     background-color: #333333;
-    color: #EEE;
     font-weight: 600;
     border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.buttons a:hover{
+    background-color: #FF5621;
+}
+
+.buttons a:active {
+    background-color: #d13f00;
+}
+
+.buttons a{
+    text-decoration: inherit;
+    color: #EEE;
+}
+
+
+@media only screen and (max-width: 600px) {
+    main{
+        margin: auto;
+        width: auto;
+        min-width: 230px;
+    }
 }
